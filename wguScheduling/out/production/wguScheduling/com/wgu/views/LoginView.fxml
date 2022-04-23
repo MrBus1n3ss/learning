@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="247.0" prefWidth="345.0" styleClass="background-color" stylesheets="@../../../css/main.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wgu.controllers.LoginController">
+   <children>
+      <VBox prefHeight="271.0" prefWidth="384.0" style="-fx-spacing: 10; -fx-padding: 15;">
+         <children>
+            <Label fx:id="lblTitle" layoutX="10.0" layoutY="10.0" styleClass="title" text="Login" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelWrongCred" styleClass="warning-color" text="warning_translate" textFill="RED" visible="false" />
+            <Label fx:id="lblUser" styleClass="all-text" text="Username" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textFieldUsername" />
+            <Label fx:id="lblPass" styleClass="all-text" text="Password" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="textFieldPassword" />
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" style="-fx-spacing: 10;">
+               <children>
+                  <Button fx:id="btnOK" mnemonicParsing="false" onAction="#OnActionLogIn" text="Ok" textFill="WHITE">
+                     <styleClass>
+                        <String fx:value="btn-md" />
+                        <String fx:value="btn-colors" />
+                     </styleClass></Button>
+                  <Button fx:id="lblExit" mnemonicParsing="false" onAction="#OnActionExit" text="Exit" textFill="WHITE">
+                     <styleClass>
+                        <String fx:value="btn-colors" />
+                        <String fx:value="btn-md" />
+                     </styleClass></Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

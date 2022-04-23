@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="697.0" prefWidth="1257.0" style="-fx-background-color: #1b262c;" stylesheets="@../../../css/main.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wgu.controllers.CalenderController">
+   <children>
+      <VBox fx:id="vBoxCalendarView" alignment="TOP_CENTER" prefHeight="697.0" prefWidth="1157.0" style="-fx-spacing: 10; -fx-padding: 10;">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="1261.0" style="-fx-spacing: 10;">
+               <children>
+                  <Label text="Calendar" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="168.0">
+                     <children>
+                        <ToggleButton fx:id="buttonWeekSelector" mnemonicParsing="false" onAction="#OnActionShowWeek" selected="true" style="-fx-background-color: #0f4c75;" text="Week" textFill="WHITE">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="weekMonthCalGroup" />
+                           </toggleGroup>
+                        </ToggleButton>
+                        <ToggleButton fx:id="buttonMonthSelector" mnemonicParsing="false" onAction="#OnActionShowMonth" style="-fx-background-color: #0f4c75;" text="Month" textFill="WHITE" toggleGroup="$weekMonthCalGroup" />
+                        <ToggleButton fx:id="buttonAllSelector" layoutX="56.0" layoutY="10.0" mnemonicParsing="false" onAction="#OnActionShowAll" prefWidth="66.0" style="-fx-background-color: #0f4c75;" text="All" textFill="WHITE" toggleGroup="$weekMonthCalGroup" />
+                     </children>
+                  </HBox>
+                  <Button mnemonicParsing="false" onAction="#OnActionAddAppointment" style="-fx-background-color: #0f4c75;" text="Add Appointment" textFill="WHITE" />
+                  <Button mnemonicParsing="false" onAction="#OnActionCustomer" style="-fx-background-color: #0f4c75;" text="Customer" textFill="WHITE" />
+                  <Button mnemonicParsing="false" onAction="#OnActionBack" styleClass="btn-colors" text="Back" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

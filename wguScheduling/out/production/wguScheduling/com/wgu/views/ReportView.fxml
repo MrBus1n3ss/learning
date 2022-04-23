@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="background-color" stylesheets="@../../../css/main.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wgu.controllers.ReportController">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="601.0">
+         <children>
+            <Label styleClass="title" text="Reports" />
+            <HBox prefHeight="41.0" prefWidth="601.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#OnActionTypeReport" styleClass="btn-colors" text="Appointment by Type Report" />
+                  <Button mnemonicParsing="false" onAction="#OnActionConsultantReport" styleClass="btn-colors" text="Consultant Schedule Report" />
+                  <Button mnemonicParsing="false" onAction="#OnActionCustomerReport" styleClass="btn-colors" text="Number of Customer Appointments Report" />
+               </children>
+               <styleClass>
+                  <String fx:value="padding-sm" />
+                  <String fx:value="spacing-sm" />
+               </styleClass>
+            </HBox>
+            <TextArea fx:id="text_area_report" prefHeight="271.0" prefWidth="601.0" />
+            <HBox prefHeight="65.0" prefWidth="601.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#OnActionClear" text="Clear">
+                     <styleClass>
+                        <String fx:value="btn-colors" />
+                        <String fx:value="btn-md" />
+                     </styleClass></Button>
+                  <Button mnemonicParsing="false" onAction="#OnActionBack" text="Back">
+                     <styleClass>
+                        <String fx:value="btn-colors" />
+                        <String fx:value="btn-md" />
+                     </styleClass></Button>
+               </children>
+               <styleClass>
+                  <String fx:value="padding-md" />
+                  <String fx:value="spacing-md" />
+               </styleClass>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

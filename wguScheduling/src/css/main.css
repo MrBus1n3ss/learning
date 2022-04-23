@@ -1,0 +1,39 @@
+.title {
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+}
+
+.all-text { -fx-text-fill: white; }
+
+.background-color { -fx-background-color:  #1b262c; }
+.btn-colors {
+    -fx-text-fill: white;
+    -fx-background-color: #0f4c75;
+    -fx-background-radius: 25px;
+}
+
+.btn-colors:hover {
+    -fx-background-color: #0e3b54;
+}
+
+.warning-color {
+    -fx-text-fill: red;
+}
+
+.padding-sm {-fx-padding: 5px; }
+.padding-md {-fx-padding: 10px; }
+.padding-lg {-fx-padding: 20px; }
+
+.spacing-sm {-fx-spacing: 5px; }
+.spacing-md {-fx-spacing: 10px; }
+.spacing-lg {-fx-spacing: 20px; }
+
+.btn-sm { -fx-pref-width: 75px; }
+
+.btn-md { -fx-pref-width: 100px; }
+
+.btn-lg { -fx-pref-width: 200px; }
+
+.month-scroll-pane {
+    -fx-background:  #1b262c;
+}

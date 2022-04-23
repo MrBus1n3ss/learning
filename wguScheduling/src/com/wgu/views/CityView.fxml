@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="641.0" styleClass="background-color" stylesheets="@../../../css/main.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wgu.controllers.CityController">
+   <children>
+      <HBox prefHeight="400.0" prefWidth="641.0" styleClass="padding-md">
+         <children>
+            <VBox prefHeight="380.0" prefWidth="360.0" styleClass="spacing-md">
+               <children>
+                  <Label styleClass="title" text="City" />
+                  <TextField fx:id="txt_field_search" onAction="#OnActionSearch" promptText="Search..." />
+                  <TableView fx:id="table_city" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                      <TableColumn fx:id="tbl_col_city_id" prefWidth="61.0" text="City Id" />
+                      <TableColumn fx:id="tbl_col_city" prefWidth="141.0" text="City" />
+                        <TableColumn fx:id="tbl_col_country" prefWidth="133.0" text="Country" />
+                    </columns>
+                  </TableView>
+                  <HBox prefHeight="51.0" prefWidth="306.0" styleClass="spacing-md">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#OnActionEdit" text="Edit City">
+                           <styleClass>
+                              <String fx:value="btn-colors" />
+                              <String fx:value="btn-md" />
+                           </styleClass>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#OnActionDelete" text="Delete City">
+                           <styleClass>
+                              <String fx:value="btn-md" />
+                              <String fx:value="btn-colors" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="380.0" prefWidth="310.0">
+               <children>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="135.0" minWidth="10.0" prefWidth="73.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="206.0" minWidth="10.0" prefWidth="206.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label styleClass="all-text" text="City Id" />
+                        <Label fx:id="lbl_city" styleClass="all-text" text="City" GridPane.rowIndex="1" />
+                        <Label fx:id="lbl_country" styleClass="all-text" text="Country" GridPane.rowIndex="2" />
+                        <Label fx:id="lbl_city_id" styleClass="all-text" text="Unknown" GridPane.columnIndex="1" />
+                        <TextField fx:id="txt_field_city" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <ComboBox fx:id="combo_box_country" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+                  <HBox prefHeight="48.0" prefWidth="296.0" styleClass="spacing-md">
+                     <children>
+                        <Button fx:id="btn_add" mnemonicParsing="false" onAction="#OnActionAdd" text="Add">
+                           <styleClass>
+                              <String fx:value="btn-colors" />
+                              <String fx:value="btn-md" />
+                           </styleClass>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#OnActionClear" text="Clear">
+                           <styleClass>
+                              <String fx:value="btn-colors" />
+                              <String fx:value="btn-md" />
+                           </styleClass>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#OnActionBack" text="Back">
+                           <styleClass>
+                              <String fx:value="btn-colors" />
+                              <String fx:value="btn-md" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <styleClass>
+                  <String fx:value="padding-md" />
+                  <String fx:value="spacing-md" />
+               </styleClass></VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

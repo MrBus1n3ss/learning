@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="819.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wgu.inventory.controllers.InventoryController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Inventory Management System" textFill="#476375">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <VBox layoutX="14.0" layoutY="48.0" prefHeight="278.0" prefWidth="371.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-padding: 15;">
+         <children>
+            <HBox prefHeight="37.0" prefWidth="339.0" style="-fx-padding: 15;">
+               <children>
+                  <Label style="-fx-pref-width: 100;" text="Parts">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Button id="btn_part_search" fx:id="btn_part_search" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#OnActionSearchPart" text="Search" />
+                  <TextField id="txt_part_search" fx:id="txt_part_search" alignment="CENTER_RIGHT" promptText="Part ID/Part Name" />
+               </children>
+            </HBox>
+            <TableView id="table_part_inventory" fx:id="table_part_inventory" prefHeight="140.0" prefWidth="330.0">
+              <columns>
+                <TableColumn id="tbl_col_part_id" fx:id="tbl_col_part_id" prefWidth="53.99998474121094" text="Part ID" />
+                <TableColumn id="tbl_col_part_name" fx:id="tbl_col_part_name" prefWidth="73.0" text="Part Name" />
+                  <TableColumn id="tbl_col_inv_lvl" fx:id="tbl_col_inv_lvl" prefWidth="98.0" text="Inventory Level" />
+                  <TableColumn id="tbl_col_part_ppu" fx:id="tbl_col_part_ppu" prefWidth="113.0" text="Price/Cost per Unit" />
+              </columns>
+            </TableView>
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="330.0" style="-fx-spacing: 20; -fx-padding: 20;">
+               <children>
+                  <Button id="btn_part_add" fx:id="btn_part_add" mnemonicParsing="false" onAction="#OnActionAddPart" style="-fx-pref-width: 65;" text="Add" />
+                  <Button id="btn_part_modify" fx:id="btn_part_modify" mnemonicParsing="false" onAction="#OnActionModifyPart" style="-fx-pref-width: 65;" text="Modify" />
+                  <Button id="btn_part_delete" fx:id="btn_part_delete" mnemonicParsing="false" onAction="#OnActionDeletePart" style="-fx-pref-width: 65;" text="Delete" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="419.0" layoutY="41.0" prefHeight="278.0" prefWidth="387.0" style="-fx-border-color: black; -fx-border-radius: 15; -fx-padding: 15;">
+         <children>
+            <HBox prefHeight="38.0" prefWidth="330.0" style="-fx-padding: 15;">
+               <children>
+                  <Label style="-fx-pref-width: 100;" text="Products">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btn_prodcut_search" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#OnActionSearchProduct" text="Search" />
+                  <TextField fx:id="txt_modify_search" alignment="CENTER_RIGHT" promptText="Products ID/Products Name" />
+               </children>
+            </HBox>
+            <TableView fx:id="table_product_inventory" prefHeight="140.0" prefWidth="330.0">
+               <columns>
+                  <TableColumn fx:id="tbl_col_mod_id" prefWidth="67.0" text="Product ID" />
+                  <TableColumn fx:id="tbl_col_mod_name" prefWidth="94.0" text="Product Name" />
+                  <TableColumn fx:id="tbl_col_mod_inv" prefWidth="101.0" text="Inventory Level" />
+                  <TableColumn fx:id="tbl_col_mod_unit" prefWidth="92.0" text="Price per Unit"/>
+               </columns>
+            </TableView>
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="330.0" style="-fx-spacing: 20; -fx-padding: 20;">
+               <children>
+                  <Button fx:id="btn_product_add" mnemonicParsing="false" onAction="#OnActionAddProduct" style="-fx-pref-width: 65;" text="Add" />
+                  <Button fx:id="btn_prodcut_modify" mnemonicParsing="false" onAction="#OnActionModifyProduct" style="-fx-pref-width: 65;" text="Modify" />
+                  <Button fx:id="btn_prodcut_delete" mnemonicParsing="false" onAction="#OnActionDeleteProduct" style="-fx-pref-width: 65;" text="Delete" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Button id="btn_main_exit" fx:id="btn_main_exit" layoutX="702.0" layoutY="345.0" mnemonicParsing="false" onAction="#OnActionExit" style="-fx-pref-width: 65;" text="Exit" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="838.0" stylesheets="@../../../css/main.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wgu.controllers.CustomerController">
+   <children>
+      <HBox prefHeight="400.0" prefWidth="838.0">
+         <children>
+            <VBox prefHeight="400.0" prefWidth="478.0">
+               <children>
+                  <Label text="Customer">
+                     <styleClass>
+                        <String fx:value="all-text" />
+                        <String fx:value="title" />
+                     </styleClass>
+                  </Label>
+                  <TextField fx:id="txt_field_search" alignment="TOP_LEFT" onAction="#OnActionSearchCustomer" promptText="Search..." />
+                  <TableView fx:id="customer_table" prefHeight="214.0" prefWidth="438.0">
+                    <columns>
+                      <TableColumn fx:id="tbl_col_customer_id" prefWidth="160.0" text="Customer Id" />
+                        <TableColumn fx:id="tbl_col_full_name" prefWidth="139.0" text="Full Name" />
+                      <TableColumn fx:id="tbl_col_active" minWidth="0.0" prefWidth="60.0" text="Active" />
+                        <TableColumn fx:id="tbl_col_address_id" prefWidth="97.0" text="Address ID" />
+                    </columns>
+                  </TableView>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="56.0" prefWidth="301.0" styleClass="spacing-md">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#OnActionEditCustomer" text="Edit Customer">
+                           <styleClass>
+                              <String fx:value="btn-md" />
+                              <String fx:value="btn-colors" />
+                           </styleClass>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#OnActionDeleteCustomer" text="Delete Customer">
+                           <styleClass>
+                              <String fx:value="btn-md" />
+                              <String fx:value="btn-colors" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <styleClass>
+                  <String fx:value="spacing-sm" />
+                  <String fx:value="padding-md" />
+               </styleClass>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="400.0" prefWidth="383.0">
+               <children>
+                  <GridPane prefWidth="600.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="285.0" minWidth="10.0" prefWidth="90.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="433.0" minWidth="10.0" prefWidth="270.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label fx:id="lbl_fname" styleClass="all-text" text="First Name" GridPane.rowIndex="1" />
+                        <Label fx:id="lbl_lname" styleClass="all-text" text="Last Name" GridPane.rowIndex="2" />
+                        <Label fx:id="lbl_active" styleClass="all-text" text="Is Active" GridPane.rowIndex="3" />
+                        <Label fx:id="lbl_address" styleClass="all-text" text="Address" GridPane.rowIndex="4" />
+                        <TextField fx:id="txt_field_fname" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="txt_field_lname" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="395.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <children>
+                              <ToggleButton fx:id="toggle_yes" mnemonicParsing="false" selected="true" styleClass="btn-sm" text="Yes">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="is_active" />
+                                 </toggleGroup>
+                              </ToggleButton>
+                              <ToggleButton fx:id="toggle_no" mnemonicParsing="false" styleClass="btn-sm" text="No" toggleGroup="$is_active" />
+                           </children>
+                        </HBox>
+                        <Label styleClass="all-text" text="Customer Id" />
+                        <Label fx:id="lbl_customer_id" text="unknown" GridPane.columnIndex="1">
+                           <styleClass>
+                              <String fx:value="all-text" />
+                              <String fx:value="padding-sm" />
+                           </styleClass>
+                        </Label>
+                        <ComboBox fx:id="combo_box_address" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="padding-lg" />
+                        <String fx:value="spacing-sm" />
+                     </styleClass>
+                  </GridPane>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="78.0" prefWidth="809.0">
+                     <children>
+                        <Button fx:id="btn_add" mnemonicParsing="false" onAction="#OnActionAddCustomer" text="Add">
+                           <styleClass>
+                              <String fx:value="btn-colors" />
+                              <String fx:value="btn-md" />
+                           </styleClass>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#OnActionClearDetails" text="Clear">
+                           <styleClass>
+                              <String fx:value="btn-colors" />
+                              <String fx:value="btn-md" />
+                           </styleClass>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#OnActionBack" text="Back">
+                           <styleClass>
+                              <String fx:value="btn-colors" />
+                              <String fx:value="btn-md" />
+                           </styleClass></Button>
+                     </children>
+                     <styleClass>
+                        <String fx:value="spacing-md" />
+                        <String fx:value="padding-lg" />
+                     </styleClass>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+   <styleClass>
+      <String fx:value="background-color" />
+      <String fx:value="spacing-sm" />
+   </styleClass>
+</AnchorPane>

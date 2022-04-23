@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="272.0" prefWidth="257.0" stylesheets="@../../../css/main.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wgu.controllers.MainMenuController">
+    <children>
+        <VBox alignment="CENTER" layoutY="6.0" prefHeight="295.0" prefWidth="247.0" styleClass="spacing-md">
+            <children>
+                <Label text="Admin">
+                    <styleClass>
+                        <String fx:value="all-text" />
+                        <String fx:value="title" />
+                    </styleClass></Label>
+                <Button mnemonicParsing="false" onAction="#OnActionCustomer" text="Customer">
+                    <styleClass>
+                        <String fx:value="btn-lg" />
+                        <String fx:value="btn-colors" />
+                    </styleClass></Button>
+                <Button mnemonicParsing="false" onAction="#OnActionAddress" text="Addresses">
+                    <styleClass>
+                        <String fx:value="btn-colors" />
+                        <String fx:value="btn-lg" />
+                    </styleClass>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#OnActionCity" text="Cities">
+                    <styleClass>
+                        <String fx:value="btn-colors" />
+                        <String fx:value="btn-lg" />
+                    </styleClass>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#OnActionCountry" text="Countries">
+                    <styleClass>
+                        <String fx:value="btn-colors" />
+                        <String fx:value="btn-lg" />
+                    </styleClass>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#OnActionUsers" text="Users">
+                    <styleClass>
+                        <String fx:value="btn-colors" />
+                        <String fx:value="btn-lg" />
+                    </styleClass>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#OnActionBack" text="Back">
+                    <styleClass>
+                        <String fx:value="btn-lg" />
+                        <String fx:value="btn-colors" />
+                    </styleClass></Button>
+            </children>
+        </VBox>
+    </children>
+    <styleClass>
+        <String fx:value="background-color" />
+        <String fx:value="padding-sm" />
+    </styleClass>
+</AnchorPane>
